@@ -213,7 +213,7 @@ class _MediaAddPageState extends State<MediaAddPage> {
           ),
           GestureDetector(
             onTap: () => Navigator.pushNamed(context, '/stats'),
-            child: _buildNavItem(Icons.bar_chart, false),
+            child: _buildNavItem(Icons.bar_chart, false),Microsoft.QuickAction.WiFi
           ),
           GestureDetector(
             onTap: () => Navigator.pushNamed(context, '/profile'),
