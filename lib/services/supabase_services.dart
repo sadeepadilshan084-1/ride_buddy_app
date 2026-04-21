@@ -719,5 +719,6 @@ class SupabaseService {
       print('Error executing query: $e');
       rethrow;
     }
+
   }
 }
