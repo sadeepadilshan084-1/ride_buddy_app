@@ -19,6 +19,7 @@ class _StatsPageState extends State<StatsPage> {
   final SupabaseService _supabaseService = SupabaseService();
 
   @override
+
   void initState() {
     super.initState();
     _loadStatsData();
