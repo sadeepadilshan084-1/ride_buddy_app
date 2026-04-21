@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 
-class MediaAddPage extends StatefulWidget {
-  const MediaAddPage({Key? key}) : super(key: key);
+class SuccessUploadPage extends StatefulWidget {
+  const SuccessUploadPage({Key? key}) : super(key: key);
 
   @override
-  State<MediaAddPage> createState() => _MediaAddPageState();
+  State<SuccessUploadPage> createState() => _SuccessUploadPageState();
 }
 
-class _MediaAddPageState extends State<MediaAddPage> {
+class _SuccessUploadPageState extends State<SuccessUploadPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.green.shade400,
+        backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
-          'Media Page - Add',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          'Media Page - Successful',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
@@ -38,13 +38,56 @@ class _MediaAddPageState extends State<MediaAddPage> {
               ),
             ),
 
-            // Options
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 10),
+                  // Success message
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.green.shade100,
+                      border: Border.all(color: Colors.green.shade300),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(
+                            Icons.check,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        const Expanded(
+                          child: Text(
+                            'Your Video Uploaded Successfully!',
+                            style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 30),
+
+                  // Upload more options
+                  const Text(
+                    'Upload More',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 16),
+
                   // Photo option
                   GestureDetector(
                     onTap: () =>
@@ -86,7 +129,7 @@ class _MediaAddPageState extends State<MediaAddPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
 
                   // Video option
                   GestureDetector(
@@ -129,7 +172,7 @@ class _MediaAddPageState extends State<MediaAddPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
 
                   // Post option
                   GestureDetector(
@@ -172,16 +215,37 @@ class _MediaAddPageState extends State<MediaAddPage> {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 30),
+
+                  // Continue button
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/media');
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green,
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: const Text(
+                        'Back to Media',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
-        onPressed: () {},
-        child: const Icon(Icons.add, color: Colors.white),
       ),
       bottomNavigationBar: _buildBottomNavBar(),
     );
@@ -213,7 +277,7 @@ class _MediaAddPageState extends State<MediaAddPage> {
           ),
           GestureDetector(
             onTap: () => Navigator.pushNamed(context, '/stats'),
-            child: _buildNavItem(Icons.bar_chart, false),Microsoft.QuickAction.WiFi
+            child: _buildNavItem(Icons.bar_chart, false),
           ),
           GestureDetector(
             onTap: () => Navigator.pushNamed(context, '/profile'),
