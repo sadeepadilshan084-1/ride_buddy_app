@@ -46,6 +46,7 @@ class PasswordChangedPage extends StatelessWidget {
                 ),
               ],
             ),
+
           ),
         ),
       ),
