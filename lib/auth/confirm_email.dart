@@ -184,6 +184,7 @@ class _ConfirmEmailPageState extends State<ConfirmEmailPage> {
               ),
             ],
           ),
+
         ),
       ),
     );
