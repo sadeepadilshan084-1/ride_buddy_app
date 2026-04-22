@@ -28,6 +28,7 @@ class _FuelAnalyticsDashboardState extends State<FuelAnalyticsDashboard> {
   List<MonthlyExpense> _monthlyHistory = [];
   Map<String, dynamic> _currentMonthDetails = {};
   Map<String, dynamic> _nextMonthPrediction = {};
+
   List<ChartDataPoint> _chartDataPoints = [];
   List<ChartDataPoint> _todayChartData = [];
   List<ChartDataPoint> _weeklyChartData = [];
