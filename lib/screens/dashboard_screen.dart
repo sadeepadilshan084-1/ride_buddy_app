@@ -269,6 +269,7 @@ class _DashboardScreenState extends State<DashboardScreen>
 
           padding: const EdgeInsets.all(16),
 
+
           child: Column(
 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -338,7 +339,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                 },
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 21),
+
 
               Column(
                 children: _entries.map((e) {
