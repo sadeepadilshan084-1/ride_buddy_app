@@ -17,6 +17,7 @@ class FuelAnalyticsDashboard extends StatefulWidget {
 }
 
 class _FuelAnalyticsDashboardState extends State<FuelAnalyticsDashboard> {
+
   late AdvancedFuelTrackerService _service;
   FuelAnalytics? _analytics;
   CostAnalytics? _costAnalytics;
