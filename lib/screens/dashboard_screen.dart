@@ -144,6 +144,7 @@ class _DashboardScreenState extends State<DashboardScreen>
 
       _isCustomFiltered = true;
 
+
       _entries = filtered;
 
       final totalCost = filtered.fold(0.0, (sum, e) => sum + e.cost);
