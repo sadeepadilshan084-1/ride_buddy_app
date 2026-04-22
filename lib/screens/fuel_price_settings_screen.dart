@@ -23,8 +23,9 @@ class _FuelPriceSettingsScreenState extends State<FuelPriceSettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
-        title: const Text('Fuel Price Settings'),
+        title: const Text('Fuel Price  Settings'),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
@@ -43,6 +44,7 @@ class _FuelPriceSettingsScreenState extends State<FuelPriceSettingsScreen> {
               itemBuilder: (context, index) {
                 final fuelPrice = widget.fuelPrices[index];
                 return Card(
+
                   margin: const EdgeInsets.only(bottom: 12),
                   child: ListTile(
                     leading: Icon(

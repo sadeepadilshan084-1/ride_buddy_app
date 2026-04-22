@@ -20,8 +20,11 @@ class FuelRefillScreen extends StatefulWidget {
 class _FuelRefillScreenState extends State<FuelRefillScreen> {
   final FuelService _fuelService = FuelService();
   List<FuelRefillModel> fuelRefills = [];
+
   Map<String, dynamic> fuelStats = {};
   ServiceReminderStatusModel? serviceStatus;
+
+
   bool isLoading = true;
   String? errorMessage;
 
@@ -117,7 +120,7 @@ class _FuelRefillScreenState extends State<FuelRefillScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // Mileage
+                // Millage set
                 TextField(
                   controller: mileageController,
                   keyboardType: TextInputType.number,
