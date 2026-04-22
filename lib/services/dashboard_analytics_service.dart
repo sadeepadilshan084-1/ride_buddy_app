@@ -117,11 +117,14 @@ class DashboardAnalyticsService {
           'upcoming_list': reminders
               .where((r) => r.isUpcoming || r.isUrgent)
               .map((r) => {
-                    'id': r.id,
-                    'title': r.title,
-                    'type': r.reminderType.name,
-                    'expiry_date': r.expiryDate,
-                    'days_remaining': r.daysUntilExpiry,
+
+
+                                        'id': r.id,
+                                       'title': r.title,
+                                       'type': r.reminderType.name,
+                                       'expiry_date': r.expiryDate,
+                                       'days_remaining': r.daysUntilExpiry,
+
                   })
               .toList(),
         },
