@@ -62,11 +62,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   late ReminderService _reminderService;
   late SupabaseService _supabaseService;
 
+
+
+
   bool _isWeatherLoading = false;
   String? _weatherError;
   WeatherData? _currentWeather;
   WeatherAlert? _currentWeatherAlert;
   Timer? _weatherTimer;
+
 
   bool _isQrUploading = false;
   String? _qrError;
@@ -76,6 +80,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _hasTodayTasks = false;
 
   // Service reminder state
+
+
   DateTime? _nextServiceDate;
   double? _nextServiceKm;
   bool _hasServiceApproaching = false;
@@ -107,6 +113,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     _initializeAuthListener();
     _initializeApp();
   }
+
+
 
   void _initializeAuthListener() {
     // Listen for auth state changes
