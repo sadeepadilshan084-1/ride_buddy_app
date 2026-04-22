@@ -216,6 +216,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           border: Border.all(color: Colors.blue.shade100),
         ),
         child: Row(
+
           children: const [
             CircularProgressIndicator(strokeWidth: 2),
             SizedBox(width: 14),
@@ -295,6 +296,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         fontWeight: FontWeight.bold,
                         color: alert.color,
                       ),
+
                     ),
                     const SizedBox(height: 4),
                     Text(
