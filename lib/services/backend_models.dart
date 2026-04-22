@@ -7,12 +7,15 @@ class UserModel {
   final String authId;
   final String fullName;
   final String email;
+
+
   final String? phone;
   final String? profileImageUrl;
   final String? fcmToken;
   final bool notificationEnabled;
   final DateTime createdAt;
   final DateTime updatedAt;
+
 
   UserModel({
     required this.id,
