@@ -24,6 +24,7 @@ class _FuelAnalyticsDashboardState extends State<FuelAnalyticsDashboard> {
   FuelRangeData? _fuelRange;
 
   //ignore: unused_field
+
   List<MonthlyExpense> _monthlyHistory = [];
   Map<String, dynamic> _currentMonthDetails = {};
   Map<String, dynamic> _nextMonthPrediction = {};
