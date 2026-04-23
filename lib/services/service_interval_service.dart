@@ -27,6 +27,8 @@ class ServiceIntervalService {
   }) async {
     try {
       final response = await _supabase
+
+
           .from(templateTable)
           .select()
           .eq('vehicle_make', make)
@@ -66,7 +68,7 @@ class ServiceIntervalService {
 
       final makes = <String>{};
       for (var item in response ?? []) {
-        makes.add(item['vehicle_make'] as String);
+        makes.add(item['vehicle_make '] as String);
       }
       return makes.toList();
     } catch (e) {
@@ -79,6 +81,7 @@ class ServiceIntervalService {
   Future<List<String>> getModelsForMake(String make) async {
     try {
       final response = await _supabase
+
           .from(templateTable)
           .select('vehicle_model')
           .eq('vehicle_make', make)
