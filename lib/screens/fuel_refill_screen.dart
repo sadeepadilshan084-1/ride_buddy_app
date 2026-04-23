@@ -126,9 +126,10 @@ class _FuelRefillScreenState extends State<FuelRefillScreen> {
                   controller: mileageController,
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
+
                     label: Text('Mileage (km)'),
                     border: OutlineInputBorder(),
-                    hintText: 'e.g., 45300',
+                    hintText: 'e.g.,  45300',
                   ),
                 ),
                 const SizedBox(height: 12),
