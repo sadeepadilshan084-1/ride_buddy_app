@@ -13,6 +13,7 @@ class MediaUploadExample extends StatefulWidget {
 }
 
 class _MediaUploadExampleState extends State<MediaUploadExample> {
+
   final MediaStorageService _storageService = MediaStorageService();
   final SupabaseService _dbService = SupabaseService();
   final ImagePicker _imagePicker = ImagePicker();
@@ -25,6 +26,8 @@ class _MediaUploadExampleState extends State<MediaUploadExample> {
   /// Example 1: Simple Image Upload
   Future<void> _uploadSimpleImage() async {
     try {
+
+
       setState(() => _isUploading = true);
 
       if (_selectedFile == null) {
