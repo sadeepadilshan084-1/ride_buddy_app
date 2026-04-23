@@ -112,6 +112,7 @@ class _FuelRefillScreenState extends State<FuelRefillScreen> {
                         child: Text(type.toUpperCase()),
                       ))
                       .toList(),
+
                   onChanged: (value) {
                     if (value != null) {
                       setState(() => selectedFuelType = value);
