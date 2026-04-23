@@ -91,7 +91,7 @@ class _FuelAnalyticsDashboardState extends State<FuelAnalyticsDashboard> {
     return Scaffold(
       appBar: AppBar(
         title: Text('${widget.vehicleName} - Analytics'),
-        backgroundColor: const Color(0xFF038124),
+         backgroundColor: const Color(0xFF038124),
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
