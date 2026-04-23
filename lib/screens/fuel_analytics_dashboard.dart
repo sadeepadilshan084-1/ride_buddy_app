@@ -43,8 +43,7 @@ class _FuelAnalyticsDashboardState extends State<FuelAnalyticsDashboard> {
     _service = AdvancedFuelTrackerService();
     _loadAnalytics();
   }
-
-  Future<void> _loadAnalytics() async {
+ Future<void> _loadAnalytics() async {
     setState(() => _isLoading = true);
     try {
       final analytics = await _service.getFuelAnalytics(widget.vehicleId);
@@ -81,8 +80,7 @@ class _FuelAnalyticsDashboardState extends State<FuelAnalyticsDashboard> {
       setState(() => _isLoading = false);
     }
   }
-
-  void _showError(String message) {
+ void _showError(String message) {
     ScaffoldMessenger.of(
       context,
     ).showSnackBar(SnackBar(content: Text(message)));
