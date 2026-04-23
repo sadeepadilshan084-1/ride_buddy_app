@@ -110,6 +110,7 @@ class _FuelAnalyticsDashboardState extends State<FuelAnalyticsDashboard> {
                   _buildCostTrendChart(),
                   const SizedBox(height: 20),
 
+
                   // Current Month & Prediction Cards
                   _buildCurrentAndPredictionCards(),
                   const SizedBox(height: 20),
