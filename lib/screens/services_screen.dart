@@ -53,6 +53,8 @@ class _ServicesScreenState extends State<ServicesScreen> {
           await _serviceManager.getServiceAnalytics(widget.vehicleId);
 
       setState(() {
+
+
         serviceHistory = services;
         serviceAnalytics = analytics ?? {};
         isLoading = false;
@@ -70,6 +72,8 @@ class _ServicesScreenState extends State<ServicesScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+
+
         backgroundColor: Colors.green.shade400,
         elevation: 0,
         leading: IconButton(
