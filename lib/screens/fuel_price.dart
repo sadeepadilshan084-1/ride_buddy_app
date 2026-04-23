@@ -23,12 +23,14 @@ class _FuelPricePageState extends State<FuelPricePage> {
     'petrol_95': null,
     'diesel_auto': null,
     'diesel_super': null,
+
   };
 
   final Map<String, DateTime?> _lastUpdated = {
     'petrol_92': null,
     'petrol_95': null,
     'diesel_auto': null,
+
     'diesel_super': null,
   };
 
@@ -47,12 +49,15 @@ class _FuelPricePageState extends State<FuelPricePage> {
     _loadFuelPrices();
   }
 
+
+
   @override
   void dispose() {
     _petrol92Controller.dispose();
     _petrol95Controller.dispose();
     _autoDieselController.dispose();
     _superDieselController.dispose();
+
     super.dispose();
   }
 
@@ -107,11 +112,13 @@ class _FuelPricePageState extends State<FuelPricePage> {
     }
   }
 
+
+
   Future<void> _saveFuelPrice(
-    String fuelType,
-    String variant,
-    TextEditingController controller,
-  ) async {
+      String fuelType,
+      String variant,
+      TextEditingController controller,
+      ) async {
     setState(() => _isSaving = true);
     try {
       final priceText = controller.text;
@@ -158,6 +165,8 @@ class _FuelPricePageState extends State<FuelPricePage> {
     }
   }
 
+
+
   Widget _buildFuelVariantRow({
     required String label,
     required String fuelType,
@@ -167,6 +176,7 @@ class _FuelPricePageState extends State<FuelPricePage> {
     final key = '${fuelType}_$variant';
     final localPrice = _currentPrices[key];
     final updatedAt = _lastUpdated[key];
+
 
     return Card(
       elevation: 1,

@@ -17,14 +17,18 @@ class FuelAnalyticsDashboard extends StatefulWidget {
 }
 
 class _FuelAnalyticsDashboardState extends State<FuelAnalyticsDashboard> {
+
   late AdvancedFuelTrackerService _service;
   FuelAnalytics? _analytics;
   CostAnalytics? _costAnalytics;
   FuelRangeData? _fuelRange;
+
   //ignore: unused_field
+
   List<MonthlyExpense> _monthlyHistory = [];
   Map<String, dynamic> _currentMonthDetails = {};
   Map<String, dynamic> _nextMonthPrediction = {};
+
   List<ChartDataPoint> _chartDataPoints = [];
   List<ChartDataPoint> _todayChartData = [];
   List<ChartDataPoint> _weeklyChartData = [];

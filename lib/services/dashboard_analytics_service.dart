@@ -54,12 +54,13 @@ class DashboardAnalyticsService {
       }
 
       return {
+
         'user_id': userId,
-        'total_vehicles': vehicles.length,
-        'active_vehicles': vehicles.where((v) => v.isActive).length,
-        'reminders': reminderStats,
-        'notifications': notificationStats,
-        'upcoming_reminders': upcomingReminders
+                'total_vehicles': vehicles.length,
+                'active_vehicles': vehicles.where((v) => v.isActive).length,
+                'reminders': reminderStats,
+                'notifications': notificationStats,
+                'upcoming_reminders': upcomingReminders
             .take(5)
             .map((r) => {
                   'id': r.id,
@@ -102,24 +103,28 @@ class DashboardAnalyticsService {
 
       return {
         'vehicle_id': vehicleId,
-        'vehicle_number': vehicle.vehicleNumber,
-        'brand': vehicle.brand,
-        'model': vehicle.model,
-        'vehicle_type': vehicle.vehicleType,
-        'current_mileage': vehicle.currentMileage,
-        'fuel_type': vehicle.fuelType,
-        'reminders': {
+                'vehicle_number': vehicle.vehicleNumber,
+                'brand': vehicle.brand,
+                'model': vehicle.model,
+                'vehicle_type': vehicle.vehicleType,
+                'current_mileage': vehicle.currentMileage,
+                'fuel_type': vehicle.fuelType,
+                'reminders':
+         {
           'active': reminders.where((r) => r.status == ReminderStatus.active).length,
           'expired': reminders.where((r) => r.status == ReminderStatus.expired).length,
           'upcoming': reminders.where((r) => r.isUpcoming).length,
           'upcoming_list': reminders
               .where((r) => r.isUpcoming || r.isUrgent)
               .map((r) => {
-                    'id': r.id,
-                    'title': r.title,
-                    'type': r.reminderType.name,
-                    'expiry_date': r.expiryDate,
-                    'days_remaining': r.daysUntilExpiry,
+
+
+                                        'id': r.id,
+                                       'title': r.title,
+                                       'type': r.reminderType.name,
+                                       'expiry_date': r.expiryDate,
+                                       'days_remaining': r.daysUntilExpiry,
+
                   })
               .toList(),
         },

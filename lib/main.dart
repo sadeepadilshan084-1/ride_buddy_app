@@ -26,12 +26,15 @@ import 'screens/reminder_screen.dart';
 import 'screens/trip_cost_calculator.dart';
 import 'screens/media.dart';
 import 'screens/media_add.dart';
+
+
 import 'screens/media_photo_upload.dart';
 import 'screens/media_video_upload.dart';
 import 'screens/media_post_upload.dart';
 import 'screens/media_success.dart';
 import 'screens/analytics_wrapper.dart';
 import 'screens/share.dart';
+
 import 'screens/logout_confirm.dart';
 import 'screens/petrol_station.dart';
 import 'screens/fuel_management_screen.dart';
@@ -59,6 +62,7 @@ Future<void> main() async {
 
   runApp(
     MultiProvider(
+
       providers: [
         ChangeNotifierProvider(create: (context) => LocaleProvider()),
         ChangeNotifierProvider.value(value: themeProvider),

@@ -144,6 +144,7 @@ class _DashboardScreenState extends State<DashboardScreen>
 
       _isCustomFiltered = true;
 
+
       _entries = filtered;
 
       final totalCost = filtered.fold(0.0, (sum, e) => sum + e.cost);
@@ -268,6 +269,7 @@ class _DashboardScreenState extends State<DashboardScreen>
 
           padding: const EdgeInsets.all(16),
 
+
           child: Column(
 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -337,7 +339,9 @@ class _DashboardScreenState extends State<DashboardScreen>
                 },
               ),
 
-              const SizedBox(height: 20),
+
+              const SizedBox(height: 21),
+
 
               Column(
                 children: _entries.map((e) {
