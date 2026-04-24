@@ -40,6 +40,7 @@ class _MultiVehicleDashboardState extends State<MultiVehicleDashboard> {
         _comparison = comparison;
         _isLoading = false;
       });
+
     } catch (e) {
       _showError('Error loading dashboard: $e');
       setState(() => _isLoading = false);
