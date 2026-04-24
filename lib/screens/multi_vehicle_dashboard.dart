@@ -15,11 +15,13 @@ class MultiVehicleDashboard extends StatefulWidget {
   State<MultiVehicleDashboard> createState() => _MultiVehicleDashboardState();
 }
 
+
 class _MultiVehicleDashboardState extends State<MultiVehicleDashboard> {
   late AdvancedFuelTrackerService _service;
   Map<String, dynamic>? _summary;
   Map<String, dynamic>? _comparison;
   bool _isLoading = true;
+
 
   @override
   void initState() {
