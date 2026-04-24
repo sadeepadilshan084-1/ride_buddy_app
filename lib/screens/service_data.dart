@@ -20,8 +20,11 @@ class _ServiceDataPageState extends State<ServiceDataPage> {
   final TextEditingController _vehicleNumberController = TextEditingController();
   final TextEditingController _currentMileageController = TextEditingController();
   final TextEditingController _lastServiceDateController = TextEditingController();
+
   final TextEditingController _nextServiceDateController = TextEditingController();
   final TextEditingController _noteController = TextEditingController();
+
+
 
   bool _isLoading = true;
   bool _isSaving = false;
@@ -44,8 +47,10 @@ class _ServiceDataPageState extends State<ServiceDataPage> {
   void _onMileageChanged() {
     // Auto-calculate next service mileage when current mileage changes
     final currentMileage = double.tryParse(_currentMileageController.text) ?? 0;
-    if (currentMileage > 0) {
       final nextService = currentMileage + 5000;
+
+    if (currentMileage > 0) {
+
       // This will help the user see the expected next service mileage
     }
   }
