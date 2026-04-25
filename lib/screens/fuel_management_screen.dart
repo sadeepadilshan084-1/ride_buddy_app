@@ -12,6 +12,7 @@ class FuelManagementScreen extends StatefulWidget {
   State<FuelManagementScreen> createState() => _FuelManagementScreenState();
 }
 
+
 class _FuelManagementScreenState extends State<FuelManagementScreen> {
   final VehicleService _vehicleService = VehicleService();
   final FuelPriceService _fuelPriceService = FuelPriceService();
@@ -86,6 +87,9 @@ class _FuelManagementScreenState extends State<FuelManagementScreen> {
     }
   }
 
+
+
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -104,12 +108,12 @@ class _FuelManagementScreenState extends State<FuelManagementScreen> {
         body: _isLoading
             ? const Center(child: CircularProgressIndicator())
             : TabBarView(
-                children: [
-                  _buildVehiclesList(),
-                  AddVehicleScreen(onVehicleAdded: _loadVehicles),
-                  FuelPriceSettingsScreen(fuelPrices: _fuelPrices, onPriceUpdated: _loadFuelPrices),
-                ],
-              ),
+          children: [
+            _buildVehiclesList(),
+            AddVehicleScreen(onVehicleAdded: _loadVehicles),
+            FuelPriceSettingsScreen(fuelPrices: _fuelPrices, onPriceUpdated: _loadFuelPrices),
+          ],
+        ),
       ),
     );
   }
