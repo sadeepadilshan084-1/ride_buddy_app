@@ -60,6 +60,7 @@ class _MultiVehicleDashboardState extends State<MultiVehicleDashboard> {
         title: const Text('Fleet Dashboard'),
         backgroundColor: Colors.blueAccent,
       ),
+
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
           : _summary == null || _comparison == null
@@ -69,9 +70,10 @@ class _MultiVehicleDashboardState extends State<MultiVehicleDashboard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+
                   // Summary Section
-                  _buildSummarySection(),
-                  const SizedBox(height: 24),
+                     _buildSummarySection(),
+                      const SizedBox(height: 24),
 
                   // Vehicle Comparison
                   _buildComparisonSection(),
