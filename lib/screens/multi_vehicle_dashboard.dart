@@ -107,12 +107,14 @@ class _MultiVehicleDashboardState extends State<MultiVehicleDashboard> {
               Icons.local_gas_station,
               Colors.green,
             ),
+
             _buildSummaryCard(
               'This Month',
               'Rs ${_summary!['total_cost_this_month'].toStringAsFixed(0)}',
               Icons.money,
               Colors.blue,
             ),
+
           ],
         ),
         const SizedBox(height: 12),
