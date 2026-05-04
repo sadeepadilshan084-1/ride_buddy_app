@@ -31,6 +31,7 @@ class DashboardAnalyticsService {
       final notificationStats = await _notificationService.getNotificationStats(userId);
       final upcomingReminders = await _reminderService.getUpcomingReminders(userId);
 
+
       // Get service status for all vehicles
       final serviceStatuses = <Map<String, dynamic>>[];
       for (final vehicle in vehicles) {
