@@ -40,6 +40,7 @@ class DashboardAnalyticsService {
               await _serviceManager.isServiceDue(vehicle.id, vehicle.currentMileage);
           final serviceAnalytics = await _serviceManager.getServiceAnalytics(vehicle.id);
 
+
           serviceStatuses.add({
             'vehicle_id': vehicle.id,
             'vehicle_number': vehicle.vehicleNumber,
