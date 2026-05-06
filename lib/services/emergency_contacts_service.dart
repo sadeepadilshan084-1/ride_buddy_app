@@ -127,6 +127,7 @@ class EmergencyContactsService {
     );
   }
 
+
   // Update emergency contact
   Future<bool> updateContact({
     required String contactId,
