@@ -143,6 +143,7 @@ class EmergencyContactsService {
     return _supabaseService.deleteEmergencyContact(contactId);
   }
 
+
   // Toggle pin status
   Future<bool> togglePin(String contactId, bool isPinned) async {
     return _supabaseService.togglePinEmergencyContact(contactId, isPinned);
