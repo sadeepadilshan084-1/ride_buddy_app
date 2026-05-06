@@ -28,6 +28,7 @@ class EmergencyContactsService {
         return;
       }
 
+
       // List of default emergency contacts for Sri Lanka
       final defaultContacts = [
         {
