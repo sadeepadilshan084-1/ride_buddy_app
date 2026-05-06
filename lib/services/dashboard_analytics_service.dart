@@ -205,6 +205,7 @@ class DashboardAnalyticsService {
             'average_cost': costStats['average_cost'],
             'total_services': costStats['total_services'],
           });
+
         } catch (e) {
           print('Error getting costs for vehicle: $e');
         }
