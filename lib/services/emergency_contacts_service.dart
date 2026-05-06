@@ -83,6 +83,7 @@ class EmergencyContactsService {
         },
       ];
 
+
       // Insert default contacts
       for (final contact in defaultContacts) {
         await _client.from('emergency_contacts').insert({
